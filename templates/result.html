@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" style="text-align:center">
+                    WEATHER REPORT
+                </h1>
+            </div>
+        </div>
+    </section>
+<div style="background-color: #f5f5f5; height: 100vh">
+    <div class="container h-100">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+                <div class="card border-0 p-3 shadow-sm text-center">
+                    <h2 style="font-size: 30px; color: blue">Current Weather For {{ city }},{{ countrycode }}</h2>
+                    <div class="media-left">
+                                <figure >
+                                    <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="Image">
+                                </figure>
+                     </div>
+                    <h3 style="font-size: 25px; color: red"> {{ day }} </h3>
+                    <h5 style="font-size: 20px;color:green">Temperature: {{ temp }} </h5>
+                    <h5 style="font-size: 20px;color:green">Pressure: {{ pressure }} hPa</h5>
+                    <h5 style="font-size: 20px;color:green">Wind Speed: {{ wind_speed }} km/hr</h5>
+                    <h5 style="font-size: 20px;color:green">Humidity: {{ humidity }} %</h5>
+                    <h5 style="font-size: 20px;color:green">Cloudiness: {{ cloudiness }} %</h5>
+                    <h5 style="font-size: 20px;color:green">Description: {{ description }} </h5>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock content %}
