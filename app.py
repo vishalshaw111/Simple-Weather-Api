@@ -7,13 +7,14 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    userid=*****************************
     r=""
     if request.method == "POST":
         city = request.form['city']
         countrycode = request.form['countrycode']
         unit = request.form['unit']
         url = requests.get(
-            'https://api.openweathermap.org/data/2.5/weather?q={},{}&appid=1963eb78cc0e9f89a4d066862d8ec90b&units=metric'.format(city,countrycode))
+            'https://api.openweathermap.org/data/2.5/weather?q={},{}&appid={}&units=metric'.format(city,countrycode,userid))
 
         weather_data = url.json()
         day=datetime.datetime.now()
